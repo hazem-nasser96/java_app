@@ -24,7 +24,7 @@ pipeline {
             steps {
                 echo 'Building the application...'
                 //sh "./mvnw clean install"
-                sh "./mvnw package"
+                sh './mvnw clean package'
             }
         }
 
