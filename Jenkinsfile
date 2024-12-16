@@ -23,7 +23,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building the application...'
-                sh "./mvnw clean install"
+                //sh "./mvnw clean install"
+                sh "./mvnw package"
             }
         }
 
@@ -37,7 +38,7 @@ pipeline {
         stage('Package') {
             steps {
                 echo 'Packaging the application...'
-                sh "./mvnw package"
+                sh "./mvnw clean install"
             }
         }
 
