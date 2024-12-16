@@ -24,23 +24,11 @@ pipeline {
             steps {
                 echo 'Building the application...'
                 //sh "./mvnw clean install"
-                sh './mvnw clean package'
+                sh './mvnw clean install'
             }
         }
 
-        stage('Test') {
-            steps {
-                echo 'Running tests...'
-                sh "./mvnw test"
-            }
-        }
-
-        stage('Package') {
-            steps {
-                echo 'Packaging the application...'
-                sh "./mvnw clean install"
-            }
-        }
+       
 
         stage('Archive Artifacts') {
             steps {
