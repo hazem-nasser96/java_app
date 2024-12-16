@@ -45,6 +45,7 @@ pipeline {
             steps {
                 echo 'Archiving build artifacts...'
                 archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
+				
             }
         }
     }
