@@ -23,21 +23,21 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building the application...'
-                sh "${MAVEN_CMD} clean install"
+                sh "./mvnw clean install"
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                sh "${MAVEN_CMD} test"
+                sh "./mvnw test"
             }
         }
 
         stage('Package') {
             steps {
                 echo 'Packaging the application...'
-                sh "${MAVEN_CMD} package"
+                sh "./mvnw package"
             }
         }
 
