@@ -1,6 +1,6 @@
 pipeline {
 
-agent { label 'agent2' }
+agent { label 'agent1' 'agent3' }
 //node('agent1&&agent2') {
 
 
