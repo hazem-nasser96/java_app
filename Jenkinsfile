@@ -1,7 +1,7 @@
 pipeline {
 
-//agent { label 'agent2' }
-node('agent1&&agent2') {
+agent { label 'agent2' }
+//node('agent1&&agent2') {
 
 
     environment {
@@ -51,6 +51,6 @@ node('agent1&&agent2') {
             echo 'Build failed. Please check the logs.'
         }
     }
-}
+
 }
 
