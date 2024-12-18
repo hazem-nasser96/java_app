@@ -1,7 +1,8 @@
 pipeline {
 //agent any
 agent {
-  label 'agent3'
+//  label 'agent3'
+  label 'agent1 && agent2'
 }
 
 
