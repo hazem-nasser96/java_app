@@ -1,10 +1,6 @@
 pipeline {
-//agent any
-agent {
-//  label 'agent3'
-  label 'agent1 && agent2'
-}
 
+agent { label('agent1 && agent2') }
 
     environment {
         MAVEN_CMD = './mvnw' // Maven wrapper command
