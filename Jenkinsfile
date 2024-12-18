@@ -1,6 +1,8 @@
 pipeline {
 
-agent { label 'agent2' }
+//agent { label 'agent2' }
+node('agent1&&agent2') {
+
 
     environment {
         MAVEN_CMD = './mvnw' // Maven wrapper command
@@ -49,5 +51,6 @@ agent { label 'agent2' }
             echo 'Build failed. Please check the logs.'
         }
     }
+}
 }
 
