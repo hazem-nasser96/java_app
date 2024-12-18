@@ -1,6 +1,6 @@
 pipeline {
 
-agent { label 'all_agents' }
+agent { label 'agent1' }
 
 
     environment {
