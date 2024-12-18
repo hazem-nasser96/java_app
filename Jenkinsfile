@@ -4,6 +4,7 @@ agent {
   label 'agent3'
 }
 
+
     environment {
         MAVEN_CMD = './mvnw' // Maven wrapper command
     }
