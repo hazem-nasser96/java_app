@@ -1,6 +1,6 @@
 pipeline {
 
-agent { label 'agent1' }
+agent { label 'agent3' }
 
     stages {
         
@@ -14,8 +14,15 @@ agent { label 'agent1' }
                 sh './mvnw clean install'
             }
         }
+		
 
-       
+       stage('test') {
+            steps {
+                echo 'Building the application...'
+                //sh "./mvnw clean install"
+                sh './mvnw test'
+            }
+        }
 
         stage('Archive Artifacts') {
             steps {
