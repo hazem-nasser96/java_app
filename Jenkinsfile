@@ -15,7 +15,7 @@ agent { label 'agent3' }
 
        stage('test') {
             steps {
-                echo 'Building the application...'
+                echo 'testing the application...'
                 //sh "./mvnw clean install"
                 sh './mvnw test'
             }
