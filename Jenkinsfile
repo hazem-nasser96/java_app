@@ -2,25 +2,10 @@ pipeline {
 
 agent { label 'agent1' }
 
-
-    environment {
-        MAVEN_CMD = './mvnw' // Maven wrapper command
-    }
-
     stages {
-        stage('Checkout') {
-            steps {
-                echo 'Checking out source code...'
-                checkout scm
-            }
-        }
+        
 
-        stage('Set Up Maven Wrapper Permissions') {
-            steps {
-                echo 'Making Maven Wrapper executable...'
-                sh 'chmod +x mvnw'
-            }
-        }
+        
 
         stage('Build') {
             steps {
